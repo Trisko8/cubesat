@@ -1,0 +1,40 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/tristan/cubesat/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a1bf6/fast && /usr/bin/make -f CMakeFiles/cmTC_a1bf6.dir/build.make CMakeFiles/cmTC_a1bf6.dir/build
+make[1]: se entra en el directorio '/home/tristan/cubesat/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a1bf6.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_a1bf6.dir/src.c.o   -c /home/tristan/cubesat/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_a1bf6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a1bf6.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_a1bf6.dir/src.c.o  -o cmTC_a1bf6 
+/usr/bin/ld: CMakeFiles/cmTC_a1bf6.dir/src.c.o: en la función `main':
+src.c:(.text+0x46): referencia a `pthread_create' sin definir
+/usr/bin/ld: src.c:(.text+0x52): referencia a `pthread_detach' sin definir
+/usr/bin/ld: src.c:(.text+0x63): referencia a `pthread_join' sin definir
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a1bf6.dir/build.make:87: cmTC_a1bf6] Error 1
+make[1]: se sale del directorio '/home/tristan/cubesat/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_a1bf6/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+

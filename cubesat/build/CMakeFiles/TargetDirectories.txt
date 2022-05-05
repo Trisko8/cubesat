@@ -1,0 +1,4 @@
+/home/tristan/cubesat/build/CMakeFiles/rebuild_cache.dir
+/home/tristan/cubesat/build/CMakeFiles/edit_cache.dir
+/home/tristan/cubesat/build/CMakeFiles/Cubesat.dir
+/home/tristan/cubesat/build/CMakeFiles/cubesat.dir
