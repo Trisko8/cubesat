@@ -17,12 +17,14 @@ MyRunAction::MyRunAction()
     man->CreateNtupleDColumn("fX");
     man->CreateNtupleDColumn("fY");
     man->CreateNtupleDColumn("fZ");
-//    man->CreateNtupleDColumn("theta");
-//    man->CreateNtupleDColumn("phi");
     man->FinishNtuple(1);
 
     man->CreateNtuple("Scoring", "Scoring");
+    man->CreateNtupleIColumn("fEvent");
     man->CreateNtupleDColumn("fEdep");
+    man->CreateNtupleDColumn("nAbsPhotons");
+    man->CreateNtupleDColumn("absTime");
+    man->CreateNtupleDColumn("fDelta");
     man->FinishNtuple(2);
 }
 
@@ -37,7 +39,7 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
     
     std::stringstream strRunID;
     strRunID << runID;
-    
+
     man->OpenFile("output"+strRunID.str()+".root");
 }
 

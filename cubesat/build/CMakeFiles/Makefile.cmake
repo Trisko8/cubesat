@@ -11,7 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.16.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeSystem.cmake"
-  "../run.mac"
+  "../gps.mac"
   "../vis.mac"
   "/home/tristan/software/geant4/geant4.10.07.p03-install/lib/Geant4-10.7.3/G4EXPATShim.cmake"
   "/home/tristan/software/geant4/geant4.10.07.p03-install/lib/Geant4-10.7.3/G4X11Shim.cmake"
@@ -113,7 +113,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "run.mac"
+  "gps.mac"
   "vis.mac"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )

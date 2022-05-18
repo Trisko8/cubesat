@@ -14,7 +14,7 @@ add_executable(cubesat cubesat.cc ${sources} ${headers})
 target_link_libraries(cubesat ${Geant4_LIBRARIES})
 
 set(CUBESAT_SCRIPTS
-  run.mac
+  gps.mac
   vis.mac
   )
 

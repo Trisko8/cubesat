@@ -37,6 +37,7 @@ int main(int argc, char** argv)
     
     if(ui)
     {
+        UImanager->ApplyCommand("/control/execute gps.mac");
         UImanager->ApplyCommand("/control/execute vis.mac");
         ui->SessionStart();
     }
