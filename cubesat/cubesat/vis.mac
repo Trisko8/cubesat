@@ -1,0 +1,17 @@
+/run/initialize
+/vis/open OGL
+/vis/viewer/set/viewpointVector 1 1 1
+/vis/drawVolume
+/vis/geometry/set/visibility logicWorld 0 false
+/vis/geometry/set/colour logicScintillator 0 cyan
+/vis/geometry/set/colour logicLayer 0 grey
+/vis/geometry/set/colour logicWallx 0 grey
+/vis/geometry/set/colour logicWallz 0 grey
+/vis/viewer/set/autoRefresh true
+/vis/scene/add/trajectories smooth
+/vis/scene/add/scale 10 cm
+/vis/scene/add/axes
+/vis/scene/add/eventID
+/vis/ogl/set/displayListLimit 300000000
+/vis/scene/endOfEventAction accumulate 
+
