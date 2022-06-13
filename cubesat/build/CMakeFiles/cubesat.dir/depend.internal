@@ -180,8 +180,6 @@ CMakeFiles/cubesat.dir/cubesat.cc.o
  /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4LogicalVolume.icc
  /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4LorentzVector.hh
  /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4MCCIndexConversionTable.hh
- /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4MTBarrier.hh
- /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4MTRunManager.hh
  /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4Material.hh
  /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4MaterialCutsCouple.hh
  /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4MaterialPropertiesIndex.hh
@@ -262,7 +260,6 @@ CMakeFiles/cubesat.dir/cubesat.cc.o
  /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4ProductionCutsTable.hh
  /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4Profiler.hh
  /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4Profiler.icc
- /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4RNGHelper.hh
  /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4RadioactiveDecayPhysics.hh
  /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4RayTracer.hh
  /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4RayTracerX.hh
@@ -1950,6 +1947,7 @@ CMakeFiles/cubesat.dir/src/event.cc.o
  ../include/event.hh
  ../include/run.hh
  /home/tristan/cubesat/src/event.cc
+ /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/CLHEP/Units/SystemOfUnits.h
  /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/CLHEP/Utility/defs.h
  /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/CLHEP/Vector/ThreeVector.h
  /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/CLHEP/Vector/ThreeVector.icc
@@ -1998,6 +1996,7 @@ CMakeFiles/cubesat.dir/src/event.cc.o
  /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4Run.hh
  /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4String.hh
  /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4String.icc
+ /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4SystemOfUnits.hh
  /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4TFileInformation.hh
  /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4TFileManager.hh
  /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4TFileManager.icc

@@ -15,12 +15,8 @@ public:
     MySensitiveDetector(G4String);
     ~MySensitiveDetector();
 
-    void AddEdep(G4double edep) {Edep += edep;} 
-
 private:
     virtual G4bool ProcessHits(G4Step *, G4TouchableHistory *);
-
-    G4double Edep;
 };
 
 #endif

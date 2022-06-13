@@ -4,6 +4,7 @@
 #include "G4UserEventAction.hh"
 #include "G4Event.hh"
 
+#include "G4SystemOfUnits.hh"
 #include "g4root.hh"
 
 #include "run.hh"
@@ -18,13 +19,13 @@ public:
     virtual void EndOfEventAction(const G4Event*);
 
     void AddEdep(G4double edep) {fEdep += edep;} 
-    void AddDelta(G4double delta) {fdelta += delta;} 
-    G4int nAbsPhotons;
-    G4double absTime;
+    void AddDose(G4double dose) {fdose += dose;}  
+    void AddCounter(G4int counter) {fcount += counter;}  
 
 private:
-    G4double fEdep;
-    G4double fdelta;
+    G4int fcount =0;
+    G4double fEdep = 0.;
+    G4double fdose = 0.;
 };
 
 #endif

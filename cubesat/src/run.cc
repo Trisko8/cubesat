@@ -1,5 +1,7 @@
 #include "run.hh"
 
+//class PrimaryGeneratorAction;
+
 MyRunAction::MyRunAction()
 {
     G4AnalysisManager *man = G4AnalysisManager::Instance();
@@ -22,9 +24,8 @@ MyRunAction::MyRunAction()
     man->CreateNtuple("Scoring", "Scoring");
     man->CreateNtupleIColumn("fEvent");
     man->CreateNtupleDColumn("fEdep");
-    man->CreateNtupleDColumn("nAbsPhotons");
-    man->CreateNtupleDColumn("absTime");
-    man->CreateNtupleDColumn("fDelta");
+    man->CreateNtupleDColumn("fDose");
+    man->CreateNtupleDColumn("fCount");
     man->FinishNtuple(2);
 }
 
@@ -32,7 +33,7 @@ MyRunAction::~MyRunAction()
 {}
 
 void MyRunAction::BeginOfRunAction(const G4Run* run)
-{
+{   
     G4AnalysisManager *man = G4AnalysisManager::Instance();
     
     G4int runID = run->GetRunID();

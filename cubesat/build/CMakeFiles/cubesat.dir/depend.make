@@ -179,8 +179,6 @@ CMakeFiles/cubesat.dir/cubesat.cc.o: /home/tristan/software/geant4/geant4.10.07.
 CMakeFiles/cubesat.dir/cubesat.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4LogicalVolume.icc
 CMakeFiles/cubesat.dir/cubesat.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4LorentzVector.hh
 CMakeFiles/cubesat.dir/cubesat.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4MCCIndexConversionTable.hh
-CMakeFiles/cubesat.dir/cubesat.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4MTBarrier.hh
-CMakeFiles/cubesat.dir/cubesat.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4MTRunManager.hh
 CMakeFiles/cubesat.dir/cubesat.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4Material.hh
 CMakeFiles/cubesat.dir/cubesat.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4MaterialCutsCouple.hh
 CMakeFiles/cubesat.dir/cubesat.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4MaterialPropertiesIndex.hh
@@ -261,7 +259,6 @@ CMakeFiles/cubesat.dir/cubesat.cc.o: /home/tristan/software/geant4/geant4.10.07.
 CMakeFiles/cubesat.dir/cubesat.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4ProductionCutsTable.hh
 CMakeFiles/cubesat.dir/cubesat.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4Profiler.hh
 CMakeFiles/cubesat.dir/cubesat.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4Profiler.icc
-CMakeFiles/cubesat.dir/cubesat.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4RNGHelper.hh
 CMakeFiles/cubesat.dir/cubesat.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4RadioactiveDecayPhysics.hh
 CMakeFiles/cubesat.dir/cubesat.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4RayTracer.hh
 CMakeFiles/cubesat.dir/cubesat.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4RayTracerX.hh
@@ -1949,6 +1946,7 @@ CMakeFiles/cubesat.dir/src/detector.cc.o: /home/tristan/software/geant4/geant4.1
 CMakeFiles/cubesat.dir/src/event.cc.o: ../include/event.hh
 CMakeFiles/cubesat.dir/src/event.cc.o: ../include/run.hh
 CMakeFiles/cubesat.dir/src/event.cc.o: ../src/event.cc
+CMakeFiles/cubesat.dir/src/event.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/CLHEP/Units/SystemOfUnits.h
 CMakeFiles/cubesat.dir/src/event.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/CLHEP/Utility/defs.h
 CMakeFiles/cubesat.dir/src/event.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/CLHEP/Vector/ThreeVector.h
 CMakeFiles/cubesat.dir/src/event.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/CLHEP/Vector/ThreeVector.icc
@@ -1997,6 +1995,7 @@ CMakeFiles/cubesat.dir/src/event.cc.o: /home/tristan/software/geant4/geant4.10.0
 CMakeFiles/cubesat.dir/src/event.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4Run.hh
 CMakeFiles/cubesat.dir/src/event.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4String.hh
 CMakeFiles/cubesat.dir/src/event.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4String.icc
+CMakeFiles/cubesat.dir/src/event.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4SystemOfUnits.hh
 CMakeFiles/cubesat.dir/src/event.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4TFileInformation.hh
 CMakeFiles/cubesat.dir/src/event.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4TFileManager.hh
 CMakeFiles/cubesat.dir/src/event.cc.o: /home/tristan/software/geant4/geant4.10.07.p03-install/include/Geant4/G4TFileManager.icc

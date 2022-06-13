@@ -9,7 +9,6 @@ MySensitiveDetector::~MySensitiveDetector()
 
 G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhist)
 {
-
     G4Track *track = aStep->GetTrack();
 
     //Getting exact position of the particle
@@ -27,9 +26,9 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
     //Getting current event
     G4int evt = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
 
+    //Declaración de los valores de las tuplas para el output
     G4AnalysisManager *man = G4AnalysisManager::Instance();
 
-    //Declaración de los valores de las tuplas para el output
     man->FillNtupleIColumn(2, 0, evt);
     man->AddNtupleRow(2);
 
