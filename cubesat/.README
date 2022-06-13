@@ -1,0 +1,13 @@
+\section cubesat COMO EJECUTAR
+
+Crear carpeta build dentro de la carpeta cubesat
+
+Orden de comandos:
+
+cd cubesat/build
+
+cmake ..
+
+make
+
+./cubesat
