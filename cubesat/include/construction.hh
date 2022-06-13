@@ -41,7 +41,7 @@ private:
 
     G4double xWorld, yWorld, zWorld;
 
-    G4OpticalSurface *mirrorSurface;
+    G4OpticalSurface *BC_620;
 };
 
 #endif

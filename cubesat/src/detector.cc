@@ -26,6 +26,9 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
     //Getting current event
     G4int evt = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
 
+    //Time
+    G4double time = preStepPoint->GetGlobalTime();
+    
     //Declaración de los valores de las tuplas para el output
     G4AnalysisManager *man = G4AnalysisManager::Instance();
 
@@ -43,6 +46,9 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
     man->FillNtupleDColumn(1, 2, posScintillator[1]);
     man->FillNtupleDColumn(1, 3, posScintillator[2]);
     man->AddNtupleRow(1);
+
+    man->FillNtupleDColumn(2, 3, time/ns);
+    man->AddNtupleRow(2);
 
     return true;
 }

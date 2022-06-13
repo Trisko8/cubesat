@@ -24,8 +24,8 @@ MyRunAction::MyRunAction()
     man->CreateNtuple("Scoring", "Scoring");
     man->CreateNtupleIColumn("fEvent");
     man->CreateNtupleDColumn("fEdep");
-    man->CreateNtupleDColumn("fDose");
     man->CreateNtupleDColumn("fCount");
+    man->CreateNtupleDColumn("Time");
     man->FinishNtuple(2);
 }
 

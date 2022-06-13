@@ -19,7 +19,6 @@ public:
     virtual void EndOfEventAction(const G4Event*);
 
     void AddEdep(G4double edep) {fEdep += edep;} 
-    void AddDose(G4double dose) {fdose += dose;}  
     void AddCounter(G4int counter) {fcount += counter;}  
 
 private:

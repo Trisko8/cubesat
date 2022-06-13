@@ -57,11 +57,11 @@ void MyDetectorConstruction::DefineMaterials()
     Al_6061->AddElement(nist->FindOrBuildElement("Al"), 1);
 
     //Mirror Material
-    mirrorSurface = new G4OpticalSurface("mirrorSurface");
+    BC_620 = new G4OpticalSurface("BC_620");
 
-    mirrorSurface->SetType(dielectric_metal);
-    mirrorSurface->SetFinish(ground);
-    mirrorSurface->SetModel(unified);
+    BC_620->SetType(dielectric_metal);
+    BC_620->SetFinish(ground);
+    BC_620->SetModel(unified);
 
     G4MaterialPropertiesTable *mptMirror = new G4MaterialPropertiesTable();
     G4double reflectivity[12] = {0.6, 0.65, 0.9, 0.92, 0.93, 0.94, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95};
@@ -69,7 +69,7 @@ void MyDetectorConstruction::DefineMaterials()
     mptMirror->AddProperty("REFLECTIVITY", energy, reflectivity, 12);
     mptMirror->AddProperty("EFFICIENCY", energy, QE, 12);
 
-    mirrorSurface->SetMaterialPropertiesTable(mptMirror);
+    BC_620->SetMaterialPropertiesTable(mptMirror);
 }
 
 void MyDetectorConstruction::ConstructScintillator()
@@ -79,7 +79,7 @@ void MyDetectorConstruction::ConstructScintillator()
 
     logicScintillator = new G4LogicalVolume(solidScintillator, ScintillatorMat, "logicScintillator");
 
-    G4LogicalSkinSurface *skin = new G4LogicalSkinSurface("skin", logicWorld, mirrorSurface);
+    G4LogicalSkinSurface *skin = new G4LogicalSkinSurface("skin", logicScintillator, BC_620);
 
     fScoringVolume = logicScintillator;
 

@@ -25,11 +25,7 @@ const G4String particleName
     counter++;
     fEventAction->AddCounter(counter);
     }
-
-    G4double edep = step->GetTotalEnergyDeposit();
-    fEventAction->AddEdep(edep);
-
-    G4double mass = ScintillatorConstruction->GetScoringVolume()->GetMass();
-    G4double dose = edep/mass;
-    fEventAction->AddDose(dose);
+    
+G4double edep = step->GetTotalEnergyDeposit();
+fEventAction->AddEdep(edep);
 }
