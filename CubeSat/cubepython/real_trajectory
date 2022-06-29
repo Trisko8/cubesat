@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import matplotlib.pyplot as plt
+import mpl_toolkits.mplot3d as m3d
+
+xr=[42.502, -42.471]
+yr=[-80.334, 80.856]
+zr=[39.644, -40.155]
+
+# Drawing.
+ax = m3d.Axes3D(plt.figure())
+ax.scatter3D(xr, yr, zr, c='none')
+ax.plot3D(xr,yr,zr, c='r', label="P = " + str("[213.729") + ", " + str("-405.144") + ", " + str("200.445]") + " + " + "t*" + str("[-0.427") + str(", ") + str("0.810") + str(", ") + str("-0.410]"))
+ax.legend()
+ax.set_xlabel('$x$' + ' (mm)')
+ax.set_ylabel('$y$' + ' (mm)')
+ax.set_zlabel('$z$' + ' (mm)')
+ax.set_xlim(-90,90)
+ax.set_ylim(-90,90)
+ax.set_zlim(-90,90)
+
+plt.savefig('real_trajectory.png')
+plt.show()
