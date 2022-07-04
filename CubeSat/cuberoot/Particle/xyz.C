@@ -12,7 +12,7 @@ void xyz()
     tree->SetBranchAddress("fY", &fY);
     tree->SetBranchAddress("fZ", &fZ);
 
-    TH3D *xyz = new TH3D("xyz","xyz",100,-90.,90.,100,-90,90,100,-90,90);
+    TH3D *xyz = new TH3D("xyz","xyz",100,-50.,50.,100,-50,50,100,-50,50);
 
     for(int i=0; i < entries; i++)
     {
@@ -32,5 +32,7 @@ void xyz()
     xyz->GetZaxis()->SetTitle("z (mm)");
     xyz->GetXaxis()->SetLabelOffset(999);
     xyz->GetXaxis()->SetLabelSize(0);
+    xyz->GetYaxis()->SetLabelOffset(999);
+    xyz->GetYaxis()->SetLabelSize(0);
     xyz->Draw("LEGO2 Z FB BB");
 }

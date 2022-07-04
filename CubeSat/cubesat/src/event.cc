@@ -18,7 +18,7 @@ void MyEventAction::EndOfEventAction(const G4Event*)
 
     G4AnalysisManager *man = G4AnalysisManager::Instance();
 
-    man->FillNtupleDColumn(2, 0, fEdep/MeV);
-    man->FillNtupleDColumn(2, 1, abs(fcount));
-    man->AddNtupleRow(2);
+    man->FillNtupleDColumn(0, 0, fEdep/MeV);
+    man->FillNtupleDColumn(0, 1, abs(fcount));
+    man->AddNtupleRow(0);
 }

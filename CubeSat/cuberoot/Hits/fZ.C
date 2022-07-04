@@ -10,7 +10,7 @@ void fZ()
 
     tree->SetBranchAddress("fZ", &fZ);
 
-    TH1F *histfZ = new TH1F("histfZ", "fZ", 100, -50, 50);
+    TH1F *histfZ = new TH1F("histfZ", "fZ", 100, -40, 40);
 
     for(int i=0; i < entries; i++)
     {
@@ -20,7 +20,7 @@ void fZ()
     }
     tree->ResetBranchAddresses();
 
-    histfZ->GetXaxis()->SetTitle("z(mm)");
+    histfZ->GetXaxis()->SetTitle("z (mm)");
     histfZ->GetYaxis()->SetTitle("Entradas");
 
     TCanvas *c1 = new TCanvas();

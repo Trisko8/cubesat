@@ -41,7 +41,7 @@ void MyDetectorConstruction::DefineMaterials()
 
     mptScintillator->AddProperty("FASTCOMPONENT", energy, scintillation, 12); //Photons for each wavelength intervalue
     mptScintillator->AddProperty("ABSLENGTH", energy, absorption, 12); 
-    mptScintillator->AddConstProperty("SCINTILLATIONYIELD", 12519./MeV); //Photons per energy loss of the particle created
+    mptScintillator->AddConstProperty("SCINTILLATIONYIELD", 12800./MeV); //Photons per energy loss of the particle created
     mptScintillator->AddConstProperty("FASTTIMECONSTANT", 2.1*ns); //Decay time of the scintillation
     //mptScintillator->AddConstProperty("SLOWTIMECONSTANT",1.*ns);
     mptScintillator->AddConstProperty("RESOLUTIONSCALE", 1.); 
@@ -86,19 +86,19 @@ void MyDetectorConstruction::ConstructScintillator()
     G4RotationMatrix* rotationMatrix = new G4RotationMatrix();
     rotationMatrix->rotateY(90.*deg);
 
-    for(G4int i = 0; i <= 12; i=i+4)
+    for(G4int i = 0; i <= 6; i=i+2)
     {    
         for(G4int j = 0; j <= 6; j=j+2)
         {
              for(G4int k = 0; k < 16; k++)
              {
-                physScintillator = new G4PVPlacement(0, G4ThreeVector(-3*cm+j*cm,-7*cm+i*cm ,-2.5*cm), logicScintillator, "physScintillator", logicWorld, false, k, true);
+                physScintillator = new G4PVPlacement(0, G4ThreeVector(-2.5*cm+j*cm,-2.5*cm+i*cm ,-2.5*cm), logicScintillator, "physScintillator", logicWorld, false, k, true);
 
-                physScintillatorT = new G4PVPlacement(0, G4ThreeVector(-2*cm+j*cm,-7*cm+i*cm ,2.5*cm), logicScintillator, "physScintillatorT", logicWorld, false, k+16, true);
+                physScintillatorT = new G4PVPlacement(0, G4ThreeVector(-3.5*cm+j*cm,-2.5*cm+i*cm ,2.5*cm), logicScintillator, "physScintillatorT", logicWorld, false, k+16, true);
 
-                physScintillatorR = new G4PVPlacement(rotationMatrix, G4ThreeVector(-2.5*cm,-5*cm+i*cm ,-3*cm+j*cm), logicScintillator, "physScintillatorR", logicWorld, false, k+32, true);
+                physScintillatorR = new G4PVPlacement(rotationMatrix, G4ThreeVector(-2.5*cm,-3.5*cm+i*cm ,-2.5*cm+j*cm), logicScintillator, "physScintillatorR", logicWorld, false, k+32, true);
 
-                physScintillatorRT = new G4PVPlacement(rotationMatrix, G4ThreeVector(2.5*cm,-5*cm+i*cm ,-2*cm+j*cm), logicScintillator, "physScintillatorRT", logicWorld, false, k+48, true);
+                physScintillatorRT = new G4PVPlacement(rotationMatrix, G4ThreeVector(2.5*cm,-3.5*cm+i*cm ,-3.5*cm+j*cm), logicScintillator, "physScintillatorRT", logicWorld, false, k+48, true);
             }
         }
     }
@@ -114,20 +114,20 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
     physWorld = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicWorld, "physWorld", 0, false, 0, true);
 
     //Supporting Structure
-    solidLayer = new G4Box("solidLayer", 6*cm, 0.55*cm, 6*cm);
+    solidLayer = new G4Box("solidLayer", 4.5*cm, 0.5*cm, 4.5*cm);
     logicLayer = new G4LogicalVolume(solidLayer, Al_6061, "logicLayer");
-    physLayerUp = new G4PVPlacement(0, G4ThreeVector(0.*cm, 8.*cm, 0.*cm), logicLayer, "physLayerUp", logicWorld, false, 0, true);
-    physLayerDown = new G4PVPlacement(0, G4ThreeVector(0.*cm, -8.*cm, 0.*cm), logicLayer, "physLayerDown", logicWorld, false, 0, true);
+    physLayerUp = new G4PVPlacement(0, G4ThreeVector(0.*cm, 4.5*cm, 0.*cm), logicLayer, "physLayerUp", logicWorld, false, 0, true);
+    physLayerDown = new G4PVPlacement(0, G4ThreeVector(0.*cm, -4.5*cm, 0.*cm), logicLayer, "physLayerDown", logicWorld, false, 0, true);
 
-    solidWallz = new G4Box("solidWallz", 0.55*cm, 7.5*cm, 6*cm);
+    solidWallz = new G4Box("solidWallz", 0.5*cm, 5.*cm, 4.5*cm);
     logicWallz = new G4LogicalVolume(solidWallz, Al_6061, "logicWallz");
-    physWallzLeft = new G4PVPlacement(0, G4ThreeVector(-5.5*cm, 0.*cm, 0.*cm), logicWallz, "physWallzLeft", logicWorld, false, 0, true);
-    physWallzRight = new G4PVPlacement(0, G4ThreeVector(5.5*cm, 0.*cm, 0.*cm), logicWallz, "physWallzRight", logicWorld, false, 0, true);
+    physWallzLeft = new G4PVPlacement(0, G4ThreeVector(-5.*cm, 0.*cm, 0.*cm), logicWallz, "physWallzLeft", logicWorld, false, 0, true);
+    physWallzRight = new G4PVPlacement(0, G4ThreeVector(5.*cm, 0.*cm, 0.*cm), logicWallz, "physWallzRight", logicWorld, false, 0, true);
 
-    solidWallx = new G4Box("solidWallx", 6*cm, 7.5*cm, 0.55*cm);
+    solidWallx = new G4Box("solidWallx", 5.5*cm, 5.*cm, 0.5*cm);
     logicWallx = new G4LogicalVolume(solidWallx, Al_6061, "logicWallx");
-    physWallxLeft = new G4PVPlacement(0, G4ThreeVector(0*cm, 0.*cm, -5.5*cm), logicWallx, "physWallxLeft", logicWorld, false, 0, true);
-    physWallxRight = new G4PVPlacement(0, G4ThreeVector(0*cm, 0.*cm, 5.5*cm), logicWallx, "physWallxRight", logicWorld, false, 0, true);
+    physWallxLeft = new G4PVPlacement(0, G4ThreeVector(0*cm, 0.*cm, -5.*cm), logicWallx, "physWallxLeft", logicWorld, false, 0, true);
+    physWallxRight = new G4PVPlacement(0, G4ThreeVector(0*cm, 0.*cm, 5.*cm), logicWallx, "physWallxRight", logicWorld, false, 0, true);
 
     ConstructScintillator();
 

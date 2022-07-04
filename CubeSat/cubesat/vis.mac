@@ -12,6 +12,6 @@
 /vis/scene/add/scale 10 cm
 /vis/scene/add/axes
 /vis/scene/add/eventID
-#/vis/ogl/set/displayListLimit 300000000
-#/vis/scene/endOfEventAction accumulate 
+/vis/ogl/set/displayListLimit 300000000
+/vis/scene/endOfEventAction accumulate 
 

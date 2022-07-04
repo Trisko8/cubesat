@@ -1,5 +1,7 @@
+#/gps/particle opticalphoton
 /gps/particle ion
 /gps/ion 1 1 1 0
+#/gps/ion 2 4 2 0
 
 /gps/pos/type Surface
 /gps/pos/shape Sphere
@@ -13,5 +15,6 @@
 /gps/ene/gradient 100.
 
 /gps/verbose 2
+
 
 
