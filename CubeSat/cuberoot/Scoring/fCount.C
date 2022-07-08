@@ -10,7 +10,7 @@ void fCount()
 
     tree->SetBranchAddress("fCount", &fCount);
 
-    TH1F *histfCount = new TH1F("histfCount", "Centelleo", 100, 0, 2300000000);
+    TH1F *histfCount = new TH1F("histfCount", "Centelleo", 100, 100, 2300000000);
 
     for(int i=0; i < entries; i++)
     {
@@ -21,7 +21,7 @@ void fCount()
     tree->ResetBranchAddresses();
 
     histfCount->GetXaxis()->SetTitle("Numero de fotones");
-    histfCount->GetYaxis()->SetTitle("Numero de eventos");
+    histfCount->GetYaxis()->SetTitle("Entradas");
 
     TCanvas *c1 = new TCanvas();
     histfCount->SetStats(0);

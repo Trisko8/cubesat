@@ -1,0 +1,29 @@
+#Partícula incidente
+#/gps/particle gamma
+/gps/particle ion
+/gps/ion 1 1 1 0
+#/gps/ion 2 4 2 0
+
+#Rayos cósmicos
+#/gps/pos/type Surface
+#/gps/pos/shape Sphere
+#/gps/pos/radius 0.5 m
+#/gps/ang/type focused
+#/gps/ang/maxtheta 90 deg
+
+#Isotrópica
+#/gps/ene/type Lin
+#/gps/ene/min 1. MeV
+#/gps/ene/max 10. MeV
+#/gps/ene/gradient 100.
+
+#Calibración
+/gps/pos/type Point
+/gps/pos/centre 0. 0. 0. 
+/gps/ang/type iso
+/gps/energy 0.1 GeV
+
+/gps/verbose 2
+
+
+

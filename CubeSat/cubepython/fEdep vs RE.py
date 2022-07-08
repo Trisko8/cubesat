@@ -23,16 +23,16 @@ def ajusta (g, x, y, p0):
 	return p, perr, r2, E
 
 #FICHERO
-fichero=loadtxt("fEdep",dtype='float',comments='#',delimiter=None, skiprows=0, usecols=None)
-x, y=fichero[:,0], fichero[:,1]
-ajuste=ajusta(lineal,x[:],y[:],None)
-valores=polyfit(x,y,1)
+fichero=loadtxt("calibracion",dtype='float',comments='#',delimiter=None, skiprows=0, usecols=None)
+x, y=1000*fichero[:,0], 1000*fichero[:,1]
+#ajuste=ajusta(lineal,x[:],y[:],None)
+valores=polyfit(x,log10(y),1)
 a,b=valores[0],valores[1]
 
 #GRÁFICA
 plt.plot(x[:],a*x[:]+b,'-',label=str(a) + 'x' + ' + ' + str(b))
-plt.plot(x[:],y[:],'bo')
-plt.xlabel('Energía real (MeV)'); plt.ylabel('Energía depositada (MeV)')
-plt.title('Energía real vs energía depositada')
+#plt.plot(x[:],y[:],'bo')
+plt.xlabel('Energía real (keV)'); plt.ylabel('log(Edep)')
+plt.title('Energía depositada vs energía real')
 plt.legend()
 plt.show()
